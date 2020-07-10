@@ -6,8 +6,8 @@ import BaseRoute from "./routes/BaseRoute";
 import store from "./store";
 
 // Styles
-// import "bootstrap/dist/css/bootstrap.css";
-// import "./assets/stylesheets/Common.scss";
+import "bootstrap/dist/css/bootstrap.css";
+import "./assets/stylesheets/Common.scss";
 
 ReactDOM.render(
   <React.StrictMode>

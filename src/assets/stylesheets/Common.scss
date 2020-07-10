@@ -1,0 +1,15 @@
+@import "base";
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto";
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
