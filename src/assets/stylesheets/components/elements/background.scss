@@ -1,0 +1,115 @@
+@import "../../base";
+
+.background-img {
+  background-image: url("../../../images/starwars.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  overflow: auto;
+}
+
+.footer-background {
+  background-image: url("../../../images/hero-banner.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: auto;
+  width: 100%;
+  overflow: auto;
+}
+
+.intro-overlay {
+  position: relative;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+#characters-img,
+#planets-img,
+#starships-img,
+#character-img,
+#starship-img,
+#planet-img,
+#intro-logo {
+  margin-top: 100px;
+}
+
+.card-img-overlay {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.card-dark {
+  background-color: #181717;
+}
+
+.link-text {
+  color: red;
+  &:hover {
+    color: yellow;
+  }
+}
+
+.overlay {
+  position: relative;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: auto;
+  width: 100%;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.footer-overlay {
+  position: relative;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: auto;
+  width: 100%;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+#intro-logo {
+  width: 70%;
+}
+
+.top-nav-collapse {
+  background-color: black;
+}
+
+@media (max-width: 768px) {
+  .navbar:not(.top-nav-collapse) {
+    background-color: black;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 850px) {
+  .navbar:not(.top-nav-collapse) {
+    background-color: black;
+  }
+}
+
+.characters,
+.planets,
+.starships {
+  background-color: #010101;
+  padding: 50px;
+  width: 100%;
+}
+
+.bottom-border {
+  border-bottom: 4px solid red;
+  padding-bottom: 1rem;
+}

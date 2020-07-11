@@ -7,7 +7,7 @@ import store from "./store";
 
 // Styles
 import "bootstrap/dist/css/bootstrap.css";
-import "./assets/stylesheets/Common.scss";
+import "./assets/stylesheets/common.scss";
 
 ReactDOM.render(
   <React.StrictMode>
