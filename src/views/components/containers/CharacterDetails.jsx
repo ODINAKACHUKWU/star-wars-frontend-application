@@ -6,10 +6,11 @@ import {
   FadeIn,
   ZoomIn,
   SlideInUp,
-  RuberBand,
+  RubberBand,
   SlideInLeft,
   SlideInRight,
-} from "../../../helpers/animations";
+  Shake,
+} from "../elements/Animations";
 
 import "../../../assets/stylesheets/components/elements/background.scss";
 
@@ -98,17 +99,19 @@ class CharacterDetails extends Component {
               <section id="characters" className="characters">
                 <div className="row d-flex justify-content-center mb-4">
                   <div className="col-md-6 d-flex justify-content-center">
-                    <RuberBand>
-                      <h2 className="text-white bottom-border">
-                        Popular Characters
-                      </h2>
-                    </RuberBand>
+                    <RubberBand>
+                      <Shake delay="2">
+                        <h2 className="text-white bottom-border">
+                          Popular Characters
+                        </h2>
+                      </Shake>
+                    </RubberBand>
                   </div>
                 </div>
                 <SlideInUp>
-                  <FadeIn>
-                    <div class="row row-cols-1 row-cols-md-3">
-                      <div class="col mb-4">
+                  <div class="row row-cols-1 row-cols-md-3">
+                    <div class="col mb-4">
+                      <FadeIn duration="8">
                         <div class="card h-100 border-0">
                           <img
                             src={character1}
@@ -139,233 +142,9 @@ class CharacterDetails extends Component {
                             </Link>
                           </div>
                         </div>
-                      </div>
-                      <div class="col mb-4">
-                        <div class="card h-100 border-0">
-                          <img
-                            src={character2}
-                            class="card-img-top"
-                            alt="..."
-                          />
-                          <div class="card-body text-white card-dark">
-                            <h5 class="card-title">Bernard Charles</h5>
-                            <p class="card-text">
-                              <span className="font-weight-bold">
-                                Birth year:
-                              </span>{" "}
-                              20AAZ
-                            </p>
-                            <p class="card-text">
-                              <span className="font-weight-bold">Gender:</span>{" "}
-                              Female
-                            </p>
-                            <Link
-                              to="#"
-                              className="d-flex justify-content-end align-items-center link-text"
-                            >
-                              Read more
-                              <FontAwesomeIcon
-                                icon={faArrowRight}
-                                className="ml-2"
-                              />
-                            </Link>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col mb-4">
-                        <div class="card h-100 border-0">
-                          <img
-                            src={character3}
-                            class="card-img-top"
-                            alt="..."
-                          />
-                          <div class="card-body text-white card-dark">
-                            <h5 class="card-title">Bryan Demetris</h5>
-                            <p class="card-text">
-                              <span className="font-weight-bold">
-                                Birth year:
-                              </span>{" "}
-                              19BBY
-                            </p>
-                            <p class="card-text">
-                              <span className="font-weight-bold">Gender:</span>{" "}
-                              Male
-                            </p>
-                            <Link
-                              to="#"
-                              className="d-flex justify-content-end align-items-center link-text"
-                            >
-                              Read more
-                              <FontAwesomeIcon
-                                icon={faArrowRight}
-                                className="ml-2"
-                              />
-                            </Link>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col mb-4">
-                        <div class="card h-100 border-0">
-                          <img
-                            src={character4}
-                            class="card-img-top"
-                            alt="..."
-                          />
-                          <div class="card-body text-white card-dark">
-                            <h5 class="card-title">Bryan Demetris</h5>
-                            <p class="card-text">
-                              <span className="font-weight-bold">
-                                Birth year:
-                              </span>{" "}
-                              19BBY
-                            </p>
-                            <p class="card-text">
-                              <span className="font-weight-bold">Gender:</span>{" "}
-                              Male
-                            </p>
-                            <Link
-                              to="#"
-                              className="d-flex justify-content-end align-items-center link-text"
-                            >
-                              Read more
-                              <FontAwesomeIcon
-                                icon={faArrowRight}
-                                className="ml-2"
-                              />
-                            </Link>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col mb-4">
-                        <div class="card h-100 border-0">
-                          <img
-                            src={character5}
-                            class="card-img-top"
-                            alt="..."
-                          />
-                          <div class="card-body text-white card-dark">
-                            <h5 class="card-title">Bryan Demetris</h5>
-                            <p class="card-text">
-                              <span className="font-weight-bold">
-                                Birth year:
-                              </span>{" "}
-                              19BBY
-                            </p>
-                            <p class="card-text">
-                              <span className="font-weight-bold">Gender:</span>{" "}
-                              Male
-                            </p>
-                            <Link
-                              to="#"
-                              className="d-flex justify-content-end align-items-center link-text"
-                            >
-                              Read more
-                              <FontAwesomeIcon
-                                icon={faArrowRight}
-                                className="ml-2"
-                              />
-                            </Link>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col mb-4">
-                        <div class="card h-100 border-0">
-                          <img
-                            src={character6}
-                            class="card-img-top"
-                            alt="..."
-                          />
-                          <div class="card-body text-white card-dark">
-                            <h5 class="card-title">Bryan Demetris</h5>
-                            <p class="card-text">
-                              <span className="font-weight-bold">
-                                Birth year:
-                              </span>{" "}
-                              19BBY
-                            </p>
-                            <p class="card-text">
-                              <span className="font-weight-bold">Gender:</span>{" "}
-                              Male
-                            </p>
-                            <Link
-                              to="#"
-                              className="d-flex justify-content-end align-items-center link-text"
-                            >
-                              Read more
-                              <FontAwesomeIcon
-                                icon={faArrowRight}
-                                className="ml-2"
-                              />
-                            </Link>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col mb-4">
-                        <div class="card h-100 border-0">
-                          <img
-                            src={character7}
-                            class="card-img-top"
-                            alt="..."
-                          />
-                          <div class="card-body text-white card-dark">
-                            <h5 class="card-title">Bryan Demetris</h5>
-                            <p class="card-text">
-                              <span className="font-weight-bold">
-                                Birth year:
-                              </span>{" "}
-                              19BBY
-                            </p>
-                            <p class="card-text">
-                              <span className="font-weight-bold">Gender:</span>{" "}
-                              Male
-                            </p>
-                            <Link
-                              to="#"
-                              className="d-flex justify-content-end align-items-center link-text"
-                            >
-                              Read more
-                              <FontAwesomeIcon
-                                icon={faArrowRight}
-                                className="ml-2"
-                              />
-                            </Link>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col mb-4">
-                        <div class="card h-100 border-0">
-                          <img
-                            src={character8}
-                            class="card-img-top"
-                            alt="..."
-                          />
-                          <div class="card-body text-white card-dark">
-                            <h5 class="card-title">Bryan Demetris</h5>
-                            <p class="card-text">
-                              <span className="font-weight-bold">
-                                Birth year:
-                              </span>{" "}
-                              19BBY
-                            </p>
-                            <p class="card-text">
-                              <span className="font-weight-bold">Gender:</span>{" "}
-                              Male
-                            </p>
-                            <Link
-                              to="#"
-                              className="d-flex justify-content-end align-items-center link-text"
-                            >
-                              Read more
-                              <FontAwesomeIcon
-                                icon={faArrowRight}
-                                className="ml-2"
-                              />
-                            </Link>
-                          </div>
-                        </div>
-                      </div>
+                      </FadeIn>
                     </div>
-                  </FadeIn>
+                  </div>
                 </SlideInUp>
               </section>
             </div>

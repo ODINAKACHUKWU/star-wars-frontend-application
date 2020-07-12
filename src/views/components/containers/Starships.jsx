@@ -5,9 +5,11 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import {
   FadeIn,
   SlideInUp,
-  RuberBand,
+  RubberBand,
   Tada,
-} from "../../../helpers/animations";
+  Shake,
+  ZoomIn,
+} from "../elements/Animations";
 
 import "../../../assets/stylesheets/components/elements/background.scss";
 
@@ -24,43 +26,47 @@ class Characters extends Component {
         <div className="container d-flex align-items-center justify-content-center h-100">
           <div className="row">
             <div className="col-md-12">
-              <FadeIn>
+              <ZoomIn>
                 <div
                   className="card bg-dark text-white border-0"
                   id="starships-img"
                 >
-                  <img
-                    src={starshipsBanner}
-                    className="card-img"
-                    width="100%"
-                    alt="Starships"
-                  />
+                  <FadeIn duration="5">
+                    <img
+                      src={starshipsBanner}
+                      className="card-img"
+                      width="100%"
+                      alt="Starships"
+                    />
+                  </FadeIn>
                   <div className="card-img-overlay d-flex align-items-center justify-content-center">
-                    <Tada>
+                    <Tada delay="2" infinite={true}>
                       <h1 className="card-title">Starwars Starships</h1>
                     </Tada>
                   </div>
                 </div>
-              </FadeIn>
+              </ZoomIn>
               <section id="characters" className="characters">
                 <div className="row d-flex justify-content-center mb-4">
                   <div className="col-md-6 d-flex justify-content-center">
-                    <RuberBand>
-                      <h2 className="text-white bottom-border">
-                        Popular Starships
-                      </h2>
-                    </RuberBand>
+                    <RubberBand>
+                      <Shake delay="2">
+                        <h2 className="text-white bottom-border">
+                          Popular Starships
+                        </h2>
+                      </Shake>
+                    </RubberBand>
                   </div>
                 </div>
                 <SlideInUp>
-                  <FadeIn>
-                    <div className="row row-cols-1 row-cols-md-3">
-                      <div className="col mb-4">
+                  <div className="row row-cols-1 row-cols-md-3">
+                    <div className="col mb-4">
+                      <FadeIn duration="8">
                         <div className="card h-100 border-0">
                           <img
                             src={starship1}
                             className="card-img-top"
-                            alt="..."
+                            alt="Starship"
                           />
                           <div className="card-body text-white card-dark">
                             <h5 className="card-title">CR90 corvette</h5>
@@ -75,7 +81,7 @@ class Characters extends Component {
                               3000000
                             </p>
                             <Link
-                              to="#"
+                              to="/starships/1"
                               className="d-flex justify-content-end align-items-center link-text"
                             >
                               Read more
@@ -86,107 +92,9 @@ class Characters extends Component {
                             </Link>
                           </div>
                         </div>
-                      </div>
-                      <div className="col mb-4">
-                        <div className="card h-100 border-0">
-                          <img
-                            src={starship2}
-                            className="card-img-top"
-                            alt="..."
-                          />
-                          <div className="card-body text-white card-dark">
-                            <h5 className="card-title">CR90 corvette</h5>
-                            <p className="card-text">
-                              <span className="font-weight-bold">Model:</span>{" "}
-                              CR90 corvette
-                            </p>
-                            <p className="card-text">
-                              <span className="font-weight-bold">
-                                Cargo capacity:
-                              </span>{" "}
-                              3000000
-                            </p>
-                            <Link
-                              to="#"
-                              className="d-flex justify-content-end align-items-center link-text"
-                            >
-                              Read more
-                              <FontAwesomeIcon
-                                icon={faArrowRight}
-                                className="ml-2"
-                              />
-                            </Link>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col mb-4">
-                        <div className="card h-100 border-0">
-                          <img
-                            src={starship3}
-                            className="card-img-top"
-                            alt="..."
-                          />
-                          <div className="card-body text-white card-dark">
-                            <h5 className="card-title">
-                              Sentinel-className landing craft
-                            </h5>
-                            <p className="card-text">
-                              <span className="font-weight-bold">Model:</span>{" "}
-                              Sentinel-className landing craft
-                            </p>
-                            <p className="card-text">
-                              <span className="font-weight-bold">
-                                Cargo capacity:
-                              </span>{" "}
-                              180000
-                            </p>
-                            <Link
-                              to="#"
-                              className="d-flex justify-content-end align-items-center link-text"
-                            >
-                              Read more
-                              <FontAwesomeIcon
-                                icon={faArrowRight}
-                                className="ml-2"
-                              />
-                            </Link>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col mb-4">
-                        <div className="card h-100 border-0">
-                          <img
-                            src={starship4}
-                            className="card-img-top"
-                            alt="..."
-                          />
-                          <div className="card-body text-white card-dark">
-                            <h5 className="card-title">Star destroyer</h5>
-                            <p className="card-text">
-                              <span className="font-weight-bold">Model:</span>{" "}
-                              Imperial I-className Star Destroyer
-                            </p>
-                            <p className="card-text">
-                              <span className="font-weight-bold">
-                                Cargo capacity:
-                              </span>{" "}
-                              150000000
-                            </p>
-                            <Link
-                              to="#"
-                              className="d-flex justify-content-end align-items-center link-text"
-                            >
-                              Read more
-                              <FontAwesomeIcon
-                                icon={faArrowRight}
-                                className="ml-2"
-                              />
-                            </Link>
-                          </div>
-                        </div>
-                      </div>
+                      </FadeIn>
                     </div>
-                  </FadeIn>
+                  </div>
                 </SlideInUp>
               </section>
             </div>
