@@ -1,11 +1,7 @@
 import React, { Component } from "react";
 import SearchInput from "./SearchInput";
 import StarwarsLogo from "./StarwarsLogo";
-import {
-  BounceInLeft,
-  BounceInRight,
-  BounceInUp,
-} from "../../../helpers/animations";
+import { BounceInLeft, BounceInRight, BounceInUp, Shake } from "./Animations";
 
 import "../../../assets/stylesheets/components/elements/background.scss";
 
@@ -28,7 +24,9 @@ class Intro extends Component {
                   Find your favourite Star wars Characters, Films, Species,
                   Planets and Starships
                 </h5>
-                <SearchInput />
+                <Shake delay="2">
+                  <SearchInput />
+                </Shake>
               </BounceInUp>
             </div>
           </div>

@@ -6,10 +6,11 @@ import {
   FadeIn,
   ZoomIn,
   SlideInUp,
-  RuberBand,
+  RubberBand,
   SlideInLeft,
   SlideInRight,
-} from "../../../helpers/animations";
+  Shake,
+} from "../elements/Animations";
 
 import "../../../assets/stylesheets/components/elements/background.scss";
 
@@ -86,17 +87,19 @@ class PlanetDetails extends Component {
               <section id="characters" className="characters">
                 <div className="row d-flex justify-content-center mb-4">
                   <div className="col-md-6 d-flex justify-content-center">
-                    <RuberBand>
-                      <h2 className="text-white bottom-border">
-                        Popular Planets
-                      </h2>
-                    </RuberBand>
+                    <RubberBand>
+                      <Shake delay="2">
+                        <h2 className="text-white bottom-border">
+                          Popular Planets
+                        </h2>
+                      </Shake>
+                    </RubberBand>
                   </div>
                 </div>
                 <SlideInUp>
-                  <FadeIn>
-                    <div class="row row-cols-1 row-cols-md-3">
-                      <div class="col mb-4">
+                  <div class="row row-cols-1 row-cols-md-3">
+                    <div class="col mb-4">
+                      <FadeIn duration="8">
                         <div class="card h-100 border-0">
                           <img src={planet1} class="card-img-top" alt="..." />
                           <div class="card-body text-white card-dark">
@@ -123,65 +126,9 @@ class PlanetDetails extends Component {
                             </Link>
                           </div>
                         </div>
-                      </div>
-                      <div class="col mb-4">
-                        <div class="card h-100 border-0">
-                          <img src={planet2} class="card-img-top" alt="..." />
-                          <div class="card-body text-white card-dark">
-                            <h5 class="card-title">Alderaan</h5>
-                            <p class="card-text">
-                              <span className="font-weight-bold">Climate:</span>{" "}
-                              Temperate
-                            </p>
-                            <p class="card-text">
-                              <span className="font-weight-bold">
-                                Population:
-                              </span>{" "}
-                              5000000000
-                            </p>
-                            <Link
-                              to="#"
-                              className="d-flex justify-content-end align-items-center link-text"
-                            >
-                              Read more
-                              <FontAwesomeIcon
-                                icon={faArrowRight}
-                                className="ml-2"
-                              />
-                            </Link>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col mb-4">
-                        <div class="card h-100 border-0">
-                          <img src={planet3} class="card-img-top" alt="..." />
-                          <div class="card-body text-white card-dark">
-                            <h5 class="card-title">Yavin IV</h5>
-                            <p class="card-text">
-                              <span className="font-weight-bold">Climate:</span>{" "}
-                              Temperate, Tropical
-                            </p>
-                            <p class="card-text">
-                              <span className="font-weight-bold">
-                                Population:
-                              </span>{" "}
-                              1000
-                            </p>
-                            <Link
-                              to="#"
-                              className="d-flex justify-content-end align-items-center link-text"
-                            >
-                              Read more
-                              <FontAwesomeIcon
-                                icon={faArrowRight}
-                                className="ml-2"
-                              />
-                            </Link>
-                          </div>
-                        </div>
-                      </div>
+                      </FadeIn>
                     </div>
-                  </FadeIn>
+                  </div>
                 </SlideInUp>
               </section>
             </div>
