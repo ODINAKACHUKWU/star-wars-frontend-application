@@ -18,7 +18,7 @@ import starship2 from "../../../assets/images/starship-2.jpg";
 import starship3 from "../../../assets/images/starship-3.jpg";
 import starship4 from "../../../assets/images/starship-4.jpg";
 
-class PlanetDetails extends Component {
+class StarshipDetails extends Component {
   render() {
     return (
       <div className="overlay">
@@ -31,7 +31,7 @@ class PlanetDetails extends Component {
                     src={starship1}
                     className="card-img-top img-fluid"
                     width="100%"
-                    alt="PlanetDetails"
+                    alt="StarshipDetails"
                   />
                   <div className="card-body text-white p-5 card-dark">
                     <SlideInRight>
@@ -157,4 +157,4 @@ class PlanetDetails extends Component {
   }
 }
 
-export default PlanetDetails;
+export default StarshipDetails;
