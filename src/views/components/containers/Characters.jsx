@@ -13,9 +13,8 @@ import {
   Shake,
   ZoomIn,
 } from "../elements/Animations";
-import fetchCharactersRequest from "../../../actions/creators/characterActions";
+import { fetchCharactersRequest } from "../../../actions/creators/characterActions";
 import Spinner from "../elements/Spinner";
-import CharacterList from "../elements/CharacterList";
 
 import "../../../assets/stylesheets/components/elements/background.scss";
 
