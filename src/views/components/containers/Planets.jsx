@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { connect } from "react-redux";
+import { withRouter } from "react-router-dom";
+import PropTypes from "prop-types";
 import {
   FadeIn,
   SlideInUp,
@@ -10,6 +13,7 @@ import {
   Shake,
   ZoomIn,
 } from "../elements/Animations";
+import fetchPlanetsRequest from "../../../actions/creators/planetActions";
 
 import "../../../assets/stylesheets/components/elements/background.scss";
 
@@ -18,7 +22,12 @@ import planet1 from "../../../assets/images/planet-1.jpg";
 import planet2 from "../../../assets/images/planet-2.jpg";
 import planet3 from "../../../assets/images/planet-3.jpg";
 
-class Characters extends Component {
+class Planets extends Component {
+  componentDidMount = () => {
+    const { fetchPlanets } = this.props;
+    fetchPlanets("planets");
+  };
+
   render() {
     return (
       <div className="overlay">
@@ -106,4 +115,19 @@ class Characters extends Component {
   }
 }
 
-export default Characters;
+Planets.propTypes = {
+  fetchPlanets: PropTypes.func.isRequired,
+  planets: PropTypes.array.isRequired,
+};
+
+const mapStateToProps = ({ planet: planets }) => ({
+  planets,
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  fetchPlanets: (resources) => dispatch(fetchPlanetsRequest(resources)),
+});
+
+export default withRouter(
+  connect(mapStateToProps, mapDispatchToProps)(Planets)
+);

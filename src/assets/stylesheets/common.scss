@@ -13,3 +13,22 @@ body {
 button:disabled {
   cursor: not-allowed;
 }
+
+.btn-view-more {
+  background-color: #000000;
+  border: 1.5px solid red;
+  color: red;
+  &:hover {
+    color: red;
+    background-color: rgb(26, 26, 26);
+  }
+}
+
+.text-light {
+  color: red !important;
+}
+
+.spinner-grow {
+  width: 1.5rem;
+  height: 1.5rem;
+}

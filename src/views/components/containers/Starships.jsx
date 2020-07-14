@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { connect } from "react-redux";
+import { withRouter } from "react-router-dom";
+import PropTypes from "prop-types";
 import {
   FadeIn,
   SlideInUp,
@@ -10,6 +13,7 @@ import {
   Shake,
   ZoomIn,
 } from "../elements/Animations";
+import fetchStarshipsRequest from "../../../actions/creators/starshipActions";
 
 import "../../../assets/stylesheets/components/elements/background.scss";
 
@@ -19,7 +23,12 @@ import starship2 from "../../../assets/images/starship-2.jpg";
 import starship3 from "../../../assets/images/starship-3.jpg";
 import starship4 from "../../../assets/images/starship-4.jpg";
 
-class Characters extends Component {
+class Starships extends Component {
+  componentDidMount = () => {
+    const { fetchStarships } = this.props;
+    fetchStarships("starships");
+  };
+
   render() {
     return (
       <div className="overlay">
@@ -105,4 +114,19 @@ class Characters extends Component {
   }
 }
 
-export default Characters;
+Starships.propTypes = {
+  fetchStarships: PropTypes.func.isRequired,
+  starships: PropTypes.array.isRequired,
+};
+
+const mapStateToProps = ({ starship: starships }) => ({
+  starships,
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  fetchStarships: (resources) => dispatch(fetchStarshipsRequest(resources)),
+});
+
+export default withRouter(
+  connect(mapStateToProps, mapDispatchToProps)(Starships)
+);
