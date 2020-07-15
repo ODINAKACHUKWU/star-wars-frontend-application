@@ -2,6 +2,8 @@
 
 [Star Wars](https://en.wikipedia.org/wiki/Star_Wars) application is a web directory of Star wars resources fetched from the [SWAPI Star Wars API](https://swapi.dev/).
 
+<img width="1440" alt="Star wars Homepage" src="./screenshots/homepage.png">
+
 # Table of Contents
 
 - [Getting Started](#Getting-Started "Goto Getting-Started")
