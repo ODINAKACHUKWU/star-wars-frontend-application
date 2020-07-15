@@ -19,7 +19,6 @@ This is a frontend javascript application built with [React JS](https://reactjs.
 - ReactJS
 - Redux
 - Bootstrap
-- Material design
 
 ## Installation
 
