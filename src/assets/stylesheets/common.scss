@@ -18,9 +18,12 @@ button:disabled {
   background-color: #000000;
   border: 1.5px solid red;
   color: red;
-  &:hover {
+  &:hover:enabled {
+    color: white;
+    background-color: red;
+  }
+  &:hover:disabled {
     color: red;
-    background-color: rgb(26, 26, 26);
   }
 }
 

@@ -1,16 +1,7 @@
 import React, { Component } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Link, withRouter } from "react-router-dom";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
-import {
-  FadeIn,
-  ZoomIn,
-  SlideInUp,
-  RubberBand,
-  SlideInRight,
-  Shake,
-} from "../elements/Animations";
+import { FadeIn, ZoomIn, SlideInRight } from "../elements/Animations";
 import { fetchStarshipRequest } from "../../../actions/creators/starshipActions";
 
 import "../../../assets/stylesheets/components/elements/background.scss";
