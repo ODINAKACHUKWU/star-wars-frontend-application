@@ -6,6 +6,8 @@ import { BounceInLeft, BounceInRight, BounceInUp, Shake } from "./Animations";
 import "../../../assets/stylesheets/components/elements/background.scss";
 
 class Intro extends Component {
+  componentDidMount() {}
+
   render() {
     return (
       <div className="intro-overlay">

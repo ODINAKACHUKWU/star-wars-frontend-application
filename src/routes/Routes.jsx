@@ -6,6 +6,7 @@ import StarshipsPage from "../views/pages/StarshipsPage";
 import CharacterDetailsPage from "../views/pages/CharacterDetailsPage";
 import PlanetDetailsPage from "../views/pages/PlanetDetailsPage";
 import StarshipDetailsPage from "../views/pages/StarshipDetailsPage";
+import SearchResultPage from "../views/pages/SearchResultPage";
 
 export default {
   default: [
@@ -43,6 +44,11 @@ export default {
       exact: true,
       path: "/starships/:id",
       component: StarshipDetailsPage,
+    },
+    {
+      exact: true,
+      path: "/search",
+      component: SearchResultPage,
     },
     {
       path: "*",

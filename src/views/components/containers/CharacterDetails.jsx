@@ -69,7 +69,7 @@ class CharacterDetails extends Component {
             <div className="col-md-12">
               <ZoomIn>
                 <div className="details-card">
-                  <div class="card border-0" id="character-img">
+                  <div class="card border-0 mb-3">
                     <div class="row d-flex align-items-center no-gutters card-dark">
                       <div class="col-md-4">
                         <FadeIn>
@@ -121,7 +121,7 @@ class CharacterDetails extends Component {
                             </p>
                             <p class="card-text">
                               <span className="font-weight-bold">Gender:</span>{" "}
-                              {gender == "n/a" ? "robot" : gender}
+                              {gender === "n/a" ? "robot" : gender}
                             </p>
                             <p class="card-text">
                               <span className="font-weight-bold">Films:</span>{" "}

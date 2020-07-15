@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { connect } from "react-redux";
-import { withRouter } from "react-router-dom";
 import PropTypes from "prop-types";
 import {
   FadeIn,
@@ -13,7 +12,7 @@ import {
   Shake,
   ZoomIn,
 } from "../elements/Animations";
-import fetchPlanetsRequest from "../../../actions/creators/planetActions";
+import { fetchPlanetsRequest } from "../../../actions/creators/planetActions";
 
 import "../../../assets/stylesheets/components/elements/background.scss";
 

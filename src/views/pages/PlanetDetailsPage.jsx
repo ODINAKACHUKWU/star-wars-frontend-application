@@ -7,8 +7,6 @@ import Footer from "../components/elements/Footer";
 import "../../assets/stylesheets/components/elements/background.scss";
 
 class PlanetDetailsPage extends Component {
-  componentDidMount() {}
-
   render() {
     return (
       <div className="background-img">

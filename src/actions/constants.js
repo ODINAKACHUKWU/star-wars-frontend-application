@@ -19,6 +19,9 @@ const TYPES = keymirror({
   FETCHING_STARSHIP: null,
   FETCH_STARSHIP_SUCCESS: null,
   FETCH_STARSHIP_FAILURE: null,
+  SEARCHING: null,
+  SEARCH_SUCCESS: null,
+  SEARCH_FAILURE: null,
 });
 
 export default TYPES;
