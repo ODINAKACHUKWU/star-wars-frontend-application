@@ -24,6 +24,11 @@ button:disabled {
   }
 }
 
+.details-card {
+  background-color: black;
+  box-shadow: 0 0 20px black;
+}
+
 .text-light {
   color: red !important;
 }
@@ -31,4 +36,10 @@ button:disabled {
 .spinner-grow {
   width: 1.5rem;
   height: 1.5rem;
+}
+
+.search-list {
+  :hover {
+    text-decoration: none;
+  }
 }

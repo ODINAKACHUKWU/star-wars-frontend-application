@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { connect } from "react-redux";
-import { withRouter } from "react-router-dom";
 import PropTypes from "prop-types";
 import {
   FadeIn,
@@ -224,9 +223,7 @@ class Characters extends Component {
                       </div>
                     </div>
                   ) : (
-                    <div className="">
-                      <Spinner />
-                    </div>
+                    <Spinner />
                   )}
                 </SlideInUp>
               </section>

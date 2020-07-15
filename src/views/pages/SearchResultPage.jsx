@@ -1,21 +1,21 @@
 import React, { Component } from "react";
 import Header from "../components/elements/Header";
-import Characters from "../components/containers/Characters";
+import SearchResultLoader from "../components/containers/SearchResultLoader";
 import Footer from "../components/elements/Footer";
 
 // Styles
 import "../../assets/stylesheets/components/elements/background.scss";
 
-class CharactersPage extends Component {
+class SearchResultPage extends Component {
   render() {
     return (
       <div className="background-img">
         <Header />
-        <Characters />
+        <SearchResultLoader />
         <Footer />
       </div>
     );
   }
 }
 
-export default CharactersPage;
+export default SearchResultPage;
